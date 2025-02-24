@@ -58,7 +58,7 @@ void setup () {
 
     timeClient.update();
 
-    int hours = timeClient.getHours()-7;
+    int hours = timeClient.getHours()-7; // -7 hours for Central Time ‎(UTC-6)‎
 
     int mins = timeClient.getMinutes();
 
