@@ -2,7 +2,7 @@
 
 By: Kurt Cantrell
 
-Description: Code to synchronize the DS3231 RTC breakout board using the Adafruit HUZZAH ESP8266 as an NTP network client. This allows for manual, instantaneous NTP synchronization of the DS3231 breakout board. Required libraries include RTClib, NTPClient, and the ESP8266 board library. This code was created using example code fragrments from the RTClib and NTPClient libraries' examples. Time delays in the breakout boards or due to processing time is not accounted for (deemed negligible).
+Description: Code to synchronize the DS3231 RTC breakout board using the Adafruit HUZZAH ESP8266 as an NTP network client. This allows for manual, instantaneous NTP synchronization of the DS3231 breakout board. Required libraries include RTClib, NTPClient, and the ESP8266 board library. This code was created by using and combining example code fragments from the RTClib and NTPClient libraries' examples. Time delays in the breakout boards or due to processing time is not accounted for (deemed negligible).
 
 Why this was needed: The current time reset in the RTClib library for the DS3231 breakout board sets the time of the RTC to the time **WHEN THE CODE FOR THE MICROCONTROLLER COMPILED**. This was creating time offsets of **> 20 seconds** between the RTC and the time shown on a computer/phone. This code was **VISUALLY VERIFIED BY COMPARING RTC SERIAL TIMESTAMP PRINTS TO A RUNNING CLOCK OPENED ON AN INTERNET BROWSER** (no error calculations were created).
 
